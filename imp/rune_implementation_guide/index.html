@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://rune.entropy.quest/legal/PATENTS/">
+        <link rel="canonical" href="https://rune.entropy.quest/imp/rune_implementation_guide/">
       
       
-        <link rel="prev" href="../NOTICE/">
+        <link rel="prev" href="../install/">
       
+      
+        <link rel="next" href="../../dev/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Patents - RUNE Framework</title>
+        <title>RUNE Implementation Guide - RUNE Framework</title>
       
     
     
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#patents" class="md-skip">
+        <a href="#rune-implementation-deployment-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Patents
+              RUNE Implementation Guide
             
           </span>
         </div>
@@ -219,11 +221,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../imp/quick_start/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../quick_start/" class="md-tabs__link">
           
   
   
@@ -279,13 +283,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../CLA/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../legal/CLA/" class="md-tabs__link">
           
   
   
@@ -400,24 +402,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -435,7 +442,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -453,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imp/quick_start/" class="md-nav__link">
+      <a href="../quick_start/" class="md-nav__link">
         
   
   
@@ -481,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imp/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
@@ -506,10 +513,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../imp/rune_implementation_guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RUNE Implementation Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -525,6 +559,304 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-deployment-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Deployment Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Deployment Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-control-node-vs-remote-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Control Node vs Remote Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installation-from-pypi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Installation from PyPI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Installation from PyPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-basic-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Basic Install
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-package-layout-control-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Package Layout (Control Node)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-runtime-directories-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Runtime Directories &amp; Config
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Runtime Directories &amp; Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-local-plugin-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Local Plugin Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-how-remote-plugins-are-actually-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. How Remote Plugins Are Actually Run
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. How Remote Plugins Are Actually Run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-high-level-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 High-Level Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-plugin-shipping-strategy-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Plugin Shipping Strategy (MVP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pre-installed-plugin-mode-futureoptional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pre-Installed Plugin Mode (Future/Optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rune-core-where-it-lives-and-what-it-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. RUNE Core: Where It Lives and What It Does
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. RUNE Core: Where It Lives and What It Does">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-core-is-centralized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Core is Centralized
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-orchestrator-lom-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Orchestrator (LOM) Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-mediator-lmm-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Mediator (LMM) Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-example-end-to-end-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Example: End-to-End Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Example: End-to-End Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-control-node-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Control Node Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-add-a-custom-plugin-control-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Add a Custom Plugin (Control Node)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-running-an-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Running an Action
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-files-directories-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Files &amp; Directories Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-what-changes-when-someone-pip-install-rune-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. What Changes When Someone pip install rune-cli?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1391,29 +1723,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -1431,7 +1758,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1449,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CLA/" class="md-nav__link">
+      <a href="../../legal/CLA/" class="md-nav__link">
         
   
   
@@ -1477,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LICENSE/" class="md-nav__link">
+      <a href="../../legal/LICENSE/" class="md-nav__link">
         
   
   
@@ -1505,7 +1832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NOTICE/" class="md-nav__link">
+      <a href="../../legal/NOTICE/" class="md-nav__link">
         
   
   
@@ -1530,19 +1857,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../legal/PATENTS/" class="md-nav__link">
         
   
   
@@ -1558,7 +1876,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1591,6 +1908,292 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-deployment-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Deployment Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Deployment Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-control-node-vs-remote-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Control Node vs Remote Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installation-from-pypi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Installation from PyPI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Installation from PyPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-basic-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Basic Install
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-package-layout-control-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Package Layout (Control Node)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-runtime-directories-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Runtime Directories &amp; Config
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Runtime Directories &amp; Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-local-plugin-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Local Plugin Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-how-remote-plugins-are-actually-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. How Remote Plugins Are Actually Run
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. How Remote Plugins Are Actually Run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-high-level-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 High-Level Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-plugin-shipping-strategy-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Plugin Shipping Strategy (MVP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pre-installed-plugin-mode-futureoptional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pre-Installed Plugin Mode (Future/Optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rune-core-where-it-lives-and-what-it-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. RUNE Core: Where It Lives and What It Does
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. RUNE Core: Where It Lives and What It Does">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-core-is-centralized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Core is Centralized
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-orchestrator-lom-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Orchestrator (LOM) Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-mediator-lmm-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Mediator (LMM) Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-example-end-to-end-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Example: End-to-End Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Example: End-to-End Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-control-node-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Control Node Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-add-a-custom-plugin-control-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Add a Custom Plugin (Control Node)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-running-an-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Running an Action
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-files-directories-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Files &amp; Directories Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-what-changes-when-someone-pip-install-rune-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. What Changes When Someone pip install rune-cli?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1609,15 +2212,413 @@
   
 
 
-<h1 id="patents">PATENTS</h1>
-<p>As of this publication, no patents have been filed for any part of the RUNE project.</p>
+<h1 id="rune-implementation-deployment-guide">RUNE Implementation &amp; Deployment Guide</h1>
+<p>This document explains how RUNE actually runs in the real world:</p>
+<ul>
+<li>Where the RUNE core lives</li>
+<li>How it’s installed from PyPI</li>
+<li>How plugins are stored, shipped, and executed on remote hosts</li>
+<li>What a typical control-node + fleet setup looks like</li>
+</ul>
+<p>This is the “how do I wire this up so it does real work” guide.</p>
 <hr />
-<p>The RUNE framework, including its runtime architecture, orchestration design, plugin mediation patterns, and error-handling protocols, is publicly documented and published under an open license (MPL-2.0) as prior art.</p>
-<p>This constitutes a defensive disclosure to prevent others from patenting the core framework, its communication protocols, or plugin interface contracts.</p>
-<p>The project author retains all rights to pursue future defensive filings or claim original authorship if patent applications infringe upon this prior art.</p>
-<p>If this project incorporates third-party packages that are themselves subject to patent grants, those are governed by their respective licenses (see <code>pyproject.toml</code>).</p>
-<p>This document does <strong>not</strong> grant any patent licenses beyond those already implied or covered under MPL-2.0.</p>
-<p>For any questions regarding licensing or intellectual property, contact the project maintainer directly.</p>
+<h2 id="1-deployment-model">1. Deployment Model</h2>
+<h3 id="11-control-node-vs-remote-nodes">1.1 Control Node vs Remote Nodes</h3>
+<p>RUNE uses a <strong>control-node</strong> model:</p>
+<ul>
+<li>
+<p><strong>RUNE Core (Python)</strong>
+  Installed on a single control node (or a small HA set):</p>
+</li>
+<li>
+<p>SoC tooling server</p>
+</li>
+<li>Jump/bastion host</li>
+<li>
+<p>Admin workstation</p>
+</li>
+<li>
+<p><strong>Remote Nodes (Linux endpoints)</strong></p>
+</li>
+<li>
+<p>No RUNE Python package installed</p>
+</li>
+<li>
+<p>Only requirements:</p>
+<ul>
+<li>SSH access (or SSM for cloud nodes)</li>
+<li><code>/bin/bash</code> (for MVP Bash plugins)</li>
+<li>Standard system tools (tar, journalctl, systemctl, etc. depending on plugins)</li>
+</ul>
+</li>
+</ul>
+<p>RUNE sends plugins to remote nodes and executes them there; all orchestration, mediation, and logging stay on the control node.</p>
+<hr />
+<h2 id="2-installation-from-pypi">2. Installation from PyPI</h2>
+<h3 id="21-basic-install">2.1 Basic Install</h3>
+<p>On the control node:</p>
+<pre><code class="language-bash">pip install rune-cli
+</code></pre>
+<p>This provides:</p>
+<ul>
+<li>A Python package: <code>rune</code></li>
+<li>A console script: <code>rune</code> (installed into your venv or system bin)</li>
+</ul>
+<p>Check it’s available:</p>
+<pre><code class="language-bash">rune --help
+</code></pre>
+<h3 id="22-package-layout-control-node">2.2 Package Layout (Control Node)</h3>
+<p>After install, you can expect something like:</p>
+<pre><code class="language-text">rune/
+  __init__.py
+  cli.py              # CLI entrypoint
+  core/
+    orchestrator.py   # RUNE Orchestrator (LOM)
+    mediator.py       # RUNE Mediator (LMM)
+  transports/
+    ssh.py            # SSH-based execution
+    ssm.py            # Optional AWS SSM-based execution
+  plugins/
+    builtin/
+      gather_logs.sh
+      restart_docker.sh
+      restart_nomad.sh
+      noop.sh
+  models/
+    rcs.py            # Runtime Communication Spec models
+    eps.py            # Error Protocol models
+    mrs.py            # Module Registration models
+  config/
+    defaults.py
+</code></pre>
+<p>You may adjust exact paths, but the idea stands: <strong>control-node only</strong>, with a clearly defined transport layer and plugin bundle.</p>
+<hr />
+<h2 id="3-runtime-directories-config">3. Runtime Directories &amp; Config</h2>
+<p>RUNE uses standard XDG-style locations (MVP can be simplified if you want).</p>
+<h3 id="31-config">3.1 Config</h3>
+<p>Default locations (in order):</p>
+<ol>
+<li><code>./rune.toml</code> (project-local)</li>
+<li><code>~/.config/rune/config.toml</code></li>
+<li><code>/etc/rune/config.toml</code> (system-wide)</li>
+</ol>
+<p>Example minimal <code>config.toml</code>:</p>
+<pre><code class="language-toml">[core]
+default_transport = &quot;ssh&quot;
+default_user = &quot;admin&quot;
+
+[ssh]
+private_key = &quot;/home/admin/.ssh/id_ed25519&quot;
+known_hosts = &quot;/home/admin/.ssh/known_hosts&quot;
+
+[plugins]
+# Local paths to plugin scripts on the control node
+plugin_dir = &quot;/opt/rune/plugins&quot;
+</code></pre>
+<h3 id="32-local-plugin-storage">3.2 Local Plugin Storage</h3>
+<p>RUNE looks for plugins in:</p>
+<ol>
+<li><code>plugins/builtin/</code> inside the package (shipped with RUNE)</li>
+<li><code>~/.local/share/rune/plugins/</code></li>
+<li><code>/opt/rune/plugins/</code> (or whatever <code>plugin_dir</code> is set to)</li>
+</ol>
+<p>You can drop custom scripts in any of those locations and wire them in via config/registry.</p>
+<hr />
+<h2 id="4-how-remote-plugins-are-actually-run">4. How Remote Plugins Are Actually Run</h2>
+<p>Here’s the core of the system: <strong>how an action like</strong>:</p>
+<pre><code class="language-bash">rune run gather-logs --node web01
+</code></pre>
+<p>turns into code running on <code>web01</code>.</p>
+<h3 id="41-high-level-flow">4.1 High-Level Flow</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant U as User
+    participant C as RUNE CLI
+    participant O as Orchestrator (LOM)
+    participant M as Mediator (LMM)
+    participant T as Transport (SSH/SSM)
+    participant H as Remote Host
+    participant P as Plugin Script
+
+    U-&gt;&gt;C: rune run gather-logs --node web01
+    C-&gt;&gt;O: Parsed command (action=gather-logs, node=web01)
+    O-&gt;&gt;M: Execution request (RCS payload)
+    M-&gt;&gt;T: Execute plugin on web01
+    T-&gt;&gt;H: Copy plugin + run via bash -s
+    H-&gt;&gt;P: Plugin receives JSON via stdin
+    P--&gt;&gt;H: JSON result to stdout, exit code
+    H--&gt;&gt;T: stdout/stderr/exit code
+    T--&gt;&gt;M: Execution result
+    M--&gt;&gt;O: Parsed result or EPS error
+    O--&gt;&gt;C: Final structured response
+    C--&gt;&gt;U: Human-readable + JSON output
+</code></pre>
+<h3 id="42-plugin-shipping-strategy-mvp">4.2 Plugin Shipping Strategy (MVP)</h3>
+<p>MVP behavior (simplest, least assumptions):</p>
+<ol>
+<li><strong>On the control node</strong>, RUNE loads the plugin script from its local <code>plugins/</code> directory.</li>
+<li>
+<p>RUNE opens a remote session via the configured transport:</p>
+</li>
+<li>
+<p>SSH: <code>ssh user@web01</code></p>
+</li>
+<li>
+<p>SSM: <code>aws ssm send-command ...</code> (future)</p>
+</li>
+<li>
+<p>RUNE <strong>copies the plugin</strong> to the remote host, typically to:</p>
+</li>
+<li>
+<p><code>/tmp/rune/plugins/gather-logs.sh</code></p>
+</li>
+<li>
+<p>RUNE sets perms:</p>
+</li>
+</ol>
+<p><code>bash
+   chmod +x /tmp/rune/plugins/gather-logs.sh</code></p>
+<ol>
+<li>RUNE runs the plugin remotely with JSON piped to stdin:</li>
+</ol>
+<p><code>bash
+   echo '&lt;JSON-RCS-PAYLOAD&gt;' | /tmp/rune/plugins/gather-logs.sh</code></p>
+<ol>
+<li>
+<p>The plugin:</p>
+</li>
+<li>
+<p>Reads JSON from stdin</p>
+</li>
+<li>Performs its task</li>
+<li>Writes structured JSON to stdout</li>
+<li>
+<p>Exits with appropriate code</p>
+</li>
+<li>
+<p>RUNE captures <code>stdout</code>, <code>stderr</code>, and exit code; the Mediator validates and normalizes them.</p>
+</li>
+<li>
+<p>(Optional) RUNE cleans up:</p>
+</li>
+<li>
+<p>Remove <code>/tmp/rune/plugins/gather-logs.sh</code></p>
+</li>
+<li>Or keep a cache per-node for repeat runs</li>
+</ol>
+<p>This default “ship and run” mode means <strong>you do not need to pre-install anything</strong> on remote hosts beyond bash and SSH/SSM.</p>
+<hr />
+<h2 id="5-pre-installed-plugin-mode-futureoptional">5. Pre-Installed Plugin Mode (Future/Optional)</h2>
+<p>In more controlled environments, you may want plugins <strong>pre-installed</strong> on all hosts (via Ansible, Salt, etc.).</p>
+<p>In that mode:</p>
+<ul>
+<li>
+<p>RUNE does <strong>not</strong> copy scripts to remote nodes.</p>
+</li>
+<li>
+<p>Instead, it executes a known path:</p>
+</li>
+</ul>
+<p><code>bash
+  echo '&lt;JSON&gt;' | /usr/local/lib/rune/plugins/gather-logs.sh</code></p>
+<ul>
+<li>The plugin location is configurable:</li>
+</ul>
+<p><code>toml
+  [remote_plugins]
+  base_dir = "/usr/local/lib/rune/plugins"</code></p>
+<ul>
+<li>RUNE just ensures the plugin name maps to a file path on the remote system.</li>
+</ul>
+<p>MVP can support this with a simple config switch:</p>
+<pre><code class="language-toml">[execution]
+deploy_mode = &quot;ship&quot;    # or &quot;preinstalled&quot;
+</code></pre>
+<hr />
+<h2 id="6-rune-core-where-it-lives-and-what-it-does">6. RUNE Core: Where It Lives and What It Does</h2>
+<h3 id="61-core-is-centralized">6.1 Core is Centralized</h3>
+<p>The RUNE core:</p>
+<ul>
+<li>Lives on the control node</li>
+<li>Is installed as a Python package</li>
+<li>
+<p>Owns:</p>
+</li>
+<li>
+<p>CLI interface (<code>rune</code>)</p>
+</li>
+<li>Orchestrator (LOM)</li>
+<li>Mediator (LMM)</li>
+<li>Transport modules</li>
+<li>Protocol models (RCS, EPS, MRS)</li>
+<li>Logging and observability hooks</li>
+</ul>
+<p>Remote nodes are <strong>dumb execution environments</strong>.</p>
+<h3 id="62-orchestrator-lom-responsibilities">6.2 Orchestrator (LOM) Responsibilities</h3>
+<ul>
+<li>Validate action name and target</li>
+<li>Resolve which plugin to use</li>
+<li>Build standardized RCS payload:</li>
+</ul>
+<p><code>json
+  {
+    "message_metadata": {...},
+    "routing": {...},
+    "payload": {
+      "schema_version": "rcs_v1",
+      "data": {
+        "input_parameters": {...}
+      }
+    }
+  }</code></p>
+<ul>
+<li>Hand off to Mediator for execution</li>
+</ul>
+<h3 id="63-mediator-lmm-responsibilities">6.3 Mediator (LMM) Responsibilities</h3>
+<ul>
+<li>Call the appropriate transport (SSH or SSM)</li>
+<li>Ship plugin (if <code>deploy_mode = ship</code>)</li>
+<li>Execute plugin remotely</li>
+<li>
+<p>Capture:</p>
+</li>
+<li>
+<p><code>stdout</code> (expected JSON)</p>
+</li>
+<li><code>stderr</code> (debug/log)</li>
+<li>
+<p>exit code</p>
+</li>
+<li>
+<p>Parse JSON and:</p>
+</li>
+<li>
+<p>On success → return normalized result</p>
+</li>
+<li>On failure → wrap in EPS error object</li>
+</ul>
+<hr />
+<h2 id="7-example-end-to-end-setup">7. Example: End-to-End Setup</h2>
+<h3 id="71-control-node-setup">7.1 Control Node Setup</h3>
+<pre><code class="language-bash"># Install RUNE
+pip install rune-cli
+
+# Optional: create config
+mkdir -p ~/.config/rune
+cat &gt; ~/.config/rune/config.toml &lt;&lt;EOF
+[core]
+default_transport = &quot;ssh&quot;
+default_user = &quot;admin&quot;
+
+[ssh]
+private_key = &quot;/home/admin/.ssh/id_ed25519&quot;
+
+[plugins]
+plugin_dir = &quot;/opt/rune/plugins&quot;
+EOF
+</code></pre>
+<h3 id="72-add-a-custom-plugin-control-node">7.2 Add a Custom Plugin (Control Node)</h3>
+<pre><code class="language-bash">sudo mkdir -p /opt/rune/plugins
+sudo tee /opt/rune/plugins/check-disk.sh &gt;/dev/null &lt;&lt;'EOF'
+#!/bin/bash
+set -euo pipefail
+INPUT=$(cat)
+# Simple example ignoring input
+USE=$(df -h / | awk 'NR==2 {print $5}')
+cat &lt;&lt;JSON
+{
+  &quot;message_metadata&quot;: {},
+  &quot;payload&quot;: {
+    &quot;result&quot;: &quot;success&quot;,
+    &quot;output_data&quot;: {
+      &quot;disk_usage&quot;: &quot;$USE&quot;
+    }
+  },
+  &quot;error&quot;: null
+}
+JSON
+EOF
+
+sudo chmod +x /opt/rune/plugins/check-disk.sh
+</code></pre>
+<p>Update config mapping if you introduce explicit registry later; for MVP, RUNE can infer from filename → action.</p>
+<h3 id="73-running-an-action">7.3 Running an Action</h3>
+<pre><code class="language-bash">rune run gather-logs --node web01 --output pretty
+rune run restart-docker --node web02
+rune run check-disk --node db01 --output json
+</code></pre>
+<hr />
+<h2 id="8-files-directories-summary">8. Files &amp; Directories Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rune/</code> (Python package)</td>
+<td>Core orchestrator/mediator logic</td>
+</tr>
+<tr>
+<td><code>rune/plugins/builtin/</code></td>
+<td>Built-in plugins shipped with RUNE</td>
+</tr>
+<tr>
+<td><code>~/.config/rune/config.toml</code></td>
+<td>User-level config</td>
+</tr>
+<tr>
+<td><code>/etc/rune/config.toml</code></td>
+<td>System-level config</td>
+</tr>
+<tr>
+<td><code>/opt/rune/plugins/</code></td>
+<td>Custom/local plugins</td>
+</tr>
+<tr>
+<td><code>/tmp/rune/plugins/</code> (remote)</td>
+<td>Shipped plugin scripts on targets</td>
+</tr>
+<tr>
+<td><code>site/</code> (local)</td>
+<td>Built MkDocs site</td>
+</tr>
+<tr>
+<td><code>gh-pages</code> branch</td>
+<td>Deployed docs for GitHub Pages</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-what-changes-when-someone-pip-install-rune-cli">9. What Changes When Someone <code>pip install rune-cli</code>?</h2>
+<p>Once a developer or operator installs the <code>rune-cli</code> package on a control node:</p>
+<ol>
+<li>They get the <code>rune</code> CLI.</li>
+<li>They get a default set of built-in plugins and protocols.</li>
+<li>
+<p>They only need:</p>
+</li>
+<li>
+<p>SSH/SSM access to their Linux fleet</p>
+</li>
+<li>
+<p>Valid config</p>
+</li>
+<li>
+<p>They can immediately run:</p>
+</li>
+</ol>
+<p><code>bash
+   rune run noop --node some-host</code></p>
+<p>and start wiring RUNE into:</p>
+<ul>
+<li>SoC dashboards</li>
+<li>CI/CD pipelines</li>
+<li>Runbooks</li>
+</ul>
+<p>No agents. No daemons. RUNE core lives in one place and <strong>reaches out</strong> to do the dirty work.</p>
+<p>© 2025 Richard Majewski. Licensed under the MPL-2.0.</p>
 
 
 

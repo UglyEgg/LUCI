@@ -5,27 +5,7 @@
          <lastmod>2025-12-06</lastmod>
     </url>
     <url>
-         <loc>https://rune.entropy.quest/api_reference/</loc>
-         <lastmod>2025-12-06</lastmod>
-    </url>
-    <url>
-         <loc>https://rune.entropy.quest/glossary_of_terms/</loc>
-         <lastmod>2025-12-06</lastmod>
-    </url>
-    <url>
-         <loc>https://rune.entropy.quest/plugin_development_guide/</loc>
-         <lastmod>2025-12-06</lastmod>
-    </url>
-    <url>
-         <loc>https://rune.entropy.quest/protocol_error/</loc>
-         <lastmod>2025-12-06</lastmod>
-    </url>
-    <url>
-         <loc>https://rune.entropy.quest/protocol_module/</loc>
-         <lastmod>2025-12-06</lastmod>
-    </url>
-    <url>
-         <loc>https://rune.entropy.quest/protocol_runtime/</loc>
+         <loc>https://rune.entropy.quest/glossary/</loc>
          <lastmod>2025-12-06</lastmod>
     </url>
     <url>
@@ -33,15 +13,7 @@
          <lastmod>2025-12-06</lastmod>
     </url>
     <url>
-         <loc>https://rune.entropy.quest/security_model/</loc>
-         <lastmod>2025-12-06</lastmod>
-    </url>
-    <url>
-         <loc>https://rune.entropy.quest/system_architecture/</loc>
-         <lastmod>2025-12-06</lastmod>
-    </url>
-    <url>
-         <loc>https://rune.entropy.quest/testing_guide/</loc>
+         <loc>https://rune.entropy.quest/why_rune/</loc>
          <lastmod>2025-12-06</lastmod>
     </url>
     <url>
@@ -49,7 +21,55 @@
          <lastmod>2025-12-06</lastmod>
     </url>
     <url>
+         <loc>https://rune.entropy.quest/contrib/architecture/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
          <loc>https://rune.entropy.quest/contrib/contributing/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/modules/api_reference/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/modules/security_model/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/modules/testing_guide/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/plugins/advanced_json/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/plugins/beginner_plugin/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/plugins/plugin_guide/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/dev/plugins/rune_bpcs_api/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/imp/install/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/imp/quick_start/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/imp/rune_implementation_guide/</loc>
          <lastmod>2025-12-06</lastmod>
     </url>
     <url>
@@ -66,6 +86,26 @@
     </url>
     <url>
          <loc>https://rune.entropy.quest/legal/PATENTS/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/protocols/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/protocols/protocol_bash/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/protocols/protocol_error/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/protocols/protocol_module/</loc>
+         <lastmod>2025-12-06</lastmod>
+    </url>
+    <url>
+         <loc>https://rune.entropy.quest/protocols/protocol_runtime/</loc>
          <lastmod>2025-12-06</lastmod>
     </url>
 </urlset>
