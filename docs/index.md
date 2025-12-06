@@ -1,45 +1,31 @@
 # Welcome to RUNE
 
-**RUNE (Remediation & Unified Node Executor)** is a modular orchestration tool built for Linux environments. It lets security and platform teams quickly respond to system alerts by triggering automated actions—like gathering logs or restarting services—across remote systems via CLI or dashboard.
+**RUNE (Remediation & Unified Node Executor)** is a focused, standards-driven automation framework for rapid, reliable remote remediation across Linux systems.
 
----
+When an alert fires and time matters, RUNE lets operators and systems trigger structured, safe, repeatable actions — such as gathering logs, restarting services, or running diagnosis plugins — with a single CLI command or dashboard button.
 
-## What is RUNE?
-
-RUNE is designed to:
-
-- Execute predefined remote actions safely and consistently
-- Return structured, machine-readable results
-- Be agentless by default, using SSH or SSM
-- Support plugins written in Bash or Python
-
----
-
-## Key Concepts
-
-- **Actions**: Discrete operations like `restart-docker` or `gather-logs`
-- **Plugins**: Scripts that implement those actions, conforming to a communication spec
-- **LOM/LMM**: Python core modules that coordinate execution and capture results
-
----
-
-## Getting Started
-
-Explore these key documents:
-
-- [Plugin Development Guide](plugin_development_guide.md)
-- [System Architecture](system_architecture.md)
-- [Runtime Communication Spec (RCS)](protocol_runtime.md)
-- [API Reference](api_reference.md)
-
-Want to help? [Contribute](contrib/contributing.md) or follow the [Roadmap](roadmap.md) to see what's next.
+RUNE is built for **incident response**, **SoC operations**, and **SRE on-call workflows**, not as yet another configuration-management clone.
 
 ---
 
 ## Why RUNE?
 
-Because clicking a button should be all it takes to recover a system.
+Most automation tools (Ansible, Salt, StackStorm, etc.) solve **large, complex, stateful** problems.  
+RUNE solves a different one:
 
-**_Simple to run. Safe to trust. Built to grow._**
+> _“Do this one action on that one node **right now** and give me structured output I can trust.”_
+
+RUNE is:
+
+- **Agentless** — remote hosts need nothing installed
+- **Protocol-driven** — RCS, EPS, and BPCS define all communication
+- **Script-friendly** — plugins are just Bash or Python
+- **Machine-consumable** — always returns structured JSON
+- **Dashboards-ready** — integrates cleanly with SoC and SRE tooling
+
+RUNE is intentionally small — the scalpel that complements the automation sledgehammers.
+
+Learn more:  
+➡️ [Why RUNE?](why_rune.md)
 
 © 2025 Richard Majewski. Licensed under the MPL-2.0.

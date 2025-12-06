@@ -1,5 +1,10 @@
 # Module Registration Specification (MRS)
 
+> **Status:** Defined and reserved for post-MVP use.  
+> The MVP does not yet perform dynamic module registration, but all future
+> capability discovery (e.g., S3 log sinks, Vault integration, external
+> remediation providers) will conform to this specification.
+
 ## Purpose
 
 Defines the registration format and process for RUNE modules and plugins. Modules declare their capabilities, supported actions, metadata, and schema versions through this protocol. This specification ensures that the RUNE Orchestrator (LOM) can discover and validate the available actions at runtime.

@@ -6,16 +6,25 @@ This document provides a high-level view of RUNE's core components and their int
 
 ## High-Level Architecture (MVP)
 
+![High-Level Architecture](res/RUNE_diag-00.png)
+
 ```mermaid
 flowchart TD
-  Dashboard["SoC Dashboard or CLI"] --> CLI["RUNE CLI"]
-  CLI --> LOM["LOM (Orchestrator)"]
-  LOM --> LMM["LMM (Mediator)"]
-  LMM --> SSHorSSM["SSH/SSM Remote Execution"]
-  SSHorSSM --> Plugin["Bash Plugin"]
-  Plugin --> LMM
-  LMM --> LOM
-  LOM --> CLI
+  D[SoC Dashboard or Operator] -->|invoke| C[RUNE CLI]
+  C -->|exec request| O[LOM -Orchestrator-]
+  O -->|build payload| M[LMM -Mediator-]
+  M -->|run remote| T[SSH / SSM Transport]
+  T -->|execute| H[Remote Host]
+  H -->|invoke| P[Bash Plugin]
+
+  %% Response path (dashed)
+  P -.->|JSON stdout + exit| H
+  H -.-> T
+  T -.-> M
+  M -.-> O
+  O -.-> C
+  C -.->|result / exit code| D
+
 ```
 
 ---
