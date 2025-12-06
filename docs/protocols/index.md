@@ -89,15 +89,13 @@ If you're extending RUNE's internals, see:
 
 ---
 
-![RUNE Protocol Architecture](../res/protocol_architecture.svg)
-
 ## Where to Go Next
 
 Choose the protocol you want to dive into:
 
-- **BPCS Protocol** — How Bash plugins interact with RUNE
+- **BPCS Message Spec** — How Bash plugins interact with RUNE
 - **RCS Message Spec** — Unified schema for RUNE messages
-- **Message Envelope Format** — Outer message structure
+- **MCS Messagei Spec** — How Module expand RUNE abilities
 - **Routing & Observability Schema** — Metadata for tracing and routing
 
 Each document provides examples, field definitions, and normative requirements.

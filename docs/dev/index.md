@@ -31,13 +31,13 @@ Plugins may be:
 
 ### **Modules**
 
-Modules bundle multiple plugins and optionally add shared logic, configuration, or state. Modules are appropriate when:
+Modules provide RUNE with new abilities.
 
-- A feature requires several related actions
-- Behavior needs reuse across plugins
-- The extension becomes larger than a single script
+- Add Vault access to RUNE
+- Add a new logger for your workflows
+- Modules can be hot swapped without modifying any other code
 
-Modules are the preferred structure for significant RUNE extensions.
+Modules are the translators connecting a back end into RUNE without disrupting service
 
 ---
 
