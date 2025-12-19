@@ -1,31 +1,46 @@
-# Welcome to RUNE
+# RUNE
 
-**RUNE (Remediation & Unified Node Executor)** is a focused, standards-driven automation framework for rapid, reliable remote remediation across Linux systems.
+RUNE is a remediation execution framework for corporate IT operations. It runs curated recovery actions (plugins) on remote Linux hosts and returns structured, machine readable results.
 
-When an alert fires and time matters, RUNE lets operators and systems trigger structured, safe, repeatable actions — such as gathering logs, restarting services, or running diagnosis plugins — with a single CLI command or dashboard button.
+RUNE is intentionally not a configuration management system. It does not manage desired state. It executes targeted actions to recover services, validate system health, and automate runbooks with audit friendly output.
 
-RUNE is built for **incident response**, **SoC operations**, and **SRE on-call workflows**, not as yet another configuration-management clone.
+## What RUNE is for
 
----
+- Incident response and service recovery: restart services, fix broken dependencies, validate a repair
+- Fleet hygiene checks: run standardized diagnostics and return structured results
+- Security and compliance runbooks: verify settings, collect evidence, remediate a narrowly scoped issue
+- Operations automation where you need traceable, deterministic execution rather than ad hoc SSH sessions
 
-## Why RUNE?
+## What RUNE is not
 
-Most automation tools (Ansible, Salt, StackStorm, etc.) solve **large, complex, stateful** problems.  
-RUNE solves a different one:
+- Not Ansible, Salt, Puppet, Chef, or a general state enforcement tool
+- Not a remote shell wrapper that streams unstructured console output
+- Not a patch management system
 
-> _“Do this one action on that one node **right now** and give me structured output I can trust.”_
+## How it works
 
-RUNE is:
+1. An operator or automation trigger requests an action.
+2. The Lifecycle Orchestration Module (LOM) validates intent and selects an execution plan.
+3. The Local Mediation Module (LMM) routes and executes the action via a transport (SSH or SSM).
+4. A plugin runs on the target node and communicates via a strict JSON protocol.
+5. Results and errors are returned in stable envelopes suitable for automation, logging, and audit.
 
-- **Agentless** — remote hosts need nothing installed
-- **Protocol-driven** — RCS, EPS, and BPCS define all communication
-- **Script-friendly** — plugins are just Bash or Python
-- **Machine-consumable** — always returns structured JSON
-- **Dashboards-ready** — integrates cleanly with SoC and SRE tooling
+RUNE is protocol first. The protocols are the product contract:
 
-RUNE is intentionally small — the scalpel that complements the automation sledgehammers.
+- Runtime Communication Specification (RCS): internal runtime messages
+- Module Registration Specification (MRS): capability and module registration
+- Bash Plugin Communication Specification (BPCS): plugin stdin and stdout contract
+- Error Protocol Specification (EPS): standardized errors
 
-Learn more:  
-➡️ [Why RUNE?](why_rune.md)
+## Start here
 
-© 2025 Richard Majewski. Licensed under the MPL-2.0.
+- [Why RUNE](why_rune.md)
+- [Quick Start](quick_start.md)
+- [Install](install.md)
+- [Architecture](architecture.md)
+- [Plugin Developer Guide](plugin_dev_guide.md)
+- [Protocols](rcs.md)
+
+## Project status
+
+RUNE is designed as a production grade architecture with a minimal initial implementation. Some features are implemented as profiles or static configuration in early builds, while keeping the same protocol contracts so behavior can scale without breaking integrations.

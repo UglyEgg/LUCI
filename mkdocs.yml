@@ -2,57 +2,67 @@ site_name: RUNE Framework
 site_url: https://rune.entropy.quest
 repo_url: https://github.com/UglyEgg/RUNE
 edit_uri: edit/main/docs/
+copyright: 'Copyright &copy; 2025-2026 Richard Majewski. Licensed under <a href="/legal/LICENSE/">MPL-2.0</a>.'
 
 theme:
   name: material
+  logo: assets/images/rune.svg
+  favicon: assets/images/rune_favicon.ico
   features:
     - navigation.tabs
+    - navigation.sections
     - content.code.copy
-    - content.code.annotate
-    - content.code.mermaid
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
 
 nav:
   - Home: index.md
   - Why RUNE: why_rune.md
 
-  - Implementers:
-      - Quick Start: imp/quick_start.md
-      - Installation Guide: imp/install.md
-      - RUNE Implementation Guide: imp/rune_implementation_guide.md
+  - Getting Started:
+      - Quick Start: quick_start.md
+      - Installation: install.md
 
-  - Developers:
-      - Overview: dev/index.md
+  - Concepts:
+      - Architecture: architecture.md
+      - Mediation Model: mediation_model.md
+      - Action Lifecycle: lifecycle.md
+      - Design Principles: Design_Principles.md
+      - Glossary: glossary.md
 
-      - Plugin Development:
-          - Plugin Quickstart (Beginner): dev/plugins/beginner_plugin.md
-          - Advanced Plugin JSON Guide: dev/plugins/advanced_json.md
-          - Plugin Guide: dev/plugins/plugin_guide.md
-          - Plugin Library API Reference: dev/plugins/rune_bpcs_api.md
+  - Protocols:
+      - Runtime Communication (RCS): rcs.md
+      - Error Protocol (EPS): eps.md
+      - Module Registration (MRS): mrs.md
+      - Bash Plugin Communication (BPCS): bpcs.md
 
-      - Module Development:
-          - Testing Guide: dev/modules/testing_guide.md
-          - Security Model: dev/modules/security_model.md
-          - Protocol / RCS API Overview: dev/modules/api_reference.md
+  - Development:
+      - Plugin Development Guide: plugin_dev_guide.md
+      - Bash Library Reference: bash_library_reference.md
+      - Testing Guide: testing.md
+      - Style Guide: STYLE_GUIDE.md
+      - Security Model: security_model.md
+      - API Reference: api_reference.md
 
-      - Protocols:
-          - Overview: protocols/index.md
-          - BPCS Protocol Specification: protocols/protocol_bash.md
-          - MCS Module Specification: protocols/protocol_module.md
-          - RCS Runtime Specification: protocols/protocol_runtime.md
-          - EPS Error Specification: protocols/protocol_error.md
+  - Reference:
+      - Documentation Map: RUNE_Complete_Refernce.md
+      - JSON Appendix: json_appendix.md
 
   - Project:
       - Roadmap: roadmap.md
-      - Glossary: glossary.md
-      - Contributing:
-          - Overview: contrib/contributing.md
-          - Style Guide: contrib/STYLE_GUIDE.md
-          - Architecture Overview: contrib/architecture.md
-
-  #          - Source Code Reference (Auto-generated):
-  #              - Core Engine: reference/core/index.md
-  #              - Python Services: reference/python/index.md
-  #              - CLI Commands: reference/cli/index.md
+      - Contributing: contributing.md
 
   - Legal:
       - Contributor License Agreement: legal/CLA.md

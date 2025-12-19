@@ -1,105 +1,40 @@
-# RUNE Glossary of Terms
+# Glossary
 
-A reference for acronyms, modules, and naming conventions used throughout the RUNE framework.
+**Action**  
+A named capability that RUNE can execute on a node. In practice, an action maps to a plugin executable plus metadata in the registry.
 
----
+**BPCS**  
+Bash Plugin Communication Specification. Defines the JSON contract for plugin stdin and stdout.
 
-### RUNE
+**CLI**  
+Command line interface used by operators and automation to request actions.
 
-**Remediation & Unified Node Executor** — The name of the framework. Modular, CLI-driven orchestration engine for Linux environments.
+**EPS**  
+Error Protocol Specification. Defines the structured error envelope used by RUNE for failures that must propagate through the system.
 
----
+**LOM**  
+Lifecycle Orchestration Module. Validates requests, applies policy, and owns registry and lifecycle.
 
-### LOM
+**LMM**  
+Local Mediation Module. Routes and executes requests, selects transports, validates outputs, and normalizes errors.
 
-**Lifecycle Orchestration Module** — Handles incoming execution requests, validates inputs, selects the correct plugin, and delegates to the LMM.
+**Module**  
+A logical component that provides a capability and communicates using RCS. Examples include LOM, LMM, ErrorHandler, and plugin capability providers.
 
----
+**MRS**  
+Module Registration Specification. Defines how modules declare identity, capabilities, and operational metadata.
 
-### LMM
+**Node**  
+A target system where an action runs. Typically a Linux host reachable by SSH or managed by SSM.
 
-**Local Mediation Module** — Executes plugins remotely over SSH or SSM, captures output, enforces structured communication, and returns results.
+**Plugin**  
+An executable on the target node that implements an action. For Bash plugins, the plugin speaks BPCS and should use the shared library.
 
----
+**RCS**  
+Runtime Communication Specification. Defines the runtime message envelope used between modules and for request correlation.
 
-### RCS
+**Transport**  
+A mechanism used to execute plugins on a node, such as SSH or AWS SSM.
 
-**Runtime Communication Specification** — The protocol that defines how action execution messages are structured and routed.
-
----
-
-### EPS
-
-**Error Protocol Specification** — Defines how errors are captured, formatted, and routed inside the RUNE system.
-
----
-
-### MRS
-
-**Module Registration Specification** — Used to declare plugin/module capabilities (name, schema, version) for introspection and validation.
-
----
-
-### Plugin
-
-A standalone Bash or Python script that conforms to the RUNE protocol and performs a specific system-level operation.
-
----
-
-### BPCS
-
-**Bash Plugin Communication Specification** — Contract that all Bash-based plugins must follow. Input via stdin, output via stdout in JSON.
-
----
-
-### CLI
-
-Command Line Interface — The `rune` terminal command used to run actions like `rune run restart-docker --node web01`
-
----
-
-### SSM
-
-**AWS Systems Manager** — Optional agent-based transport method for executing remote commands without SSH.
-
----
-
-### Trace ID / Span ID
-
-Unique identifiers used to track actions across distributed components and log trails.
-
----
-
-### Job ID
-
-A unique identifier representing one execution instance of a plugin.
-
----
-
-### Action
-
-The logical name of an operation that RUNE can execute, such as `gather-logs`, `restart-docker`, or `noop`.
-
----
-
-### Plugin Directory
-
-Location where registered plugins reside. Example: `plugins/` folder under project root.
-
----
-
-### Payload
-
-The body of a structured JSON message that includes the data to be passed into or out of an action execution.
-
----
-
-### exit code
-
-Integer returned by a plugin indicating success (`0`) or failure (`1+`). Must be consistent with structured output.
-
----
-
-This glossary will evolve as RUNE expands. PRs welcome for new terms.
-
-© 2025 Richard Majewski. Licensed under the MPL-2.0.
+**Trace**  
+Identifiers (`trace_id`, `span_id`, correlation id) carried through messages to support observability and audit.
